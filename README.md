@@ -9,3 +9,7 @@
 
 #### 1. [move_ppt.py](https://github.com/doncc/worktools/blob/master/move_ppt.py)
 批量移动文件位置的脚本
+
+#### 2. [chmod_dir](https://github.com/doncc/worktools/blob/master/chmod_dir)
+
+批量给子目录赋予权限
