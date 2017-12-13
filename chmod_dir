@@ -1,0 +1,16 @@
+#!/bin/bash
+# by Git@Darkbug
+# Function: 批量给子目录赋予权限
+# Use: 放在要整理的文件夹的根目录，执行 ./chmod_dir
+
+#文件夹要设置的权限
+permissions=777
+
+find . -name "*.pptx" > tmp.file
+
+while read line; do
+  chmod $permissions "$line"
+done < tmp.file
+
+rm tmp.file
+ls -l -R | grep ^d
