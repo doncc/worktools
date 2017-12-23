@@ -13,3 +13,8 @@
 #### 2. [chmod_dir](https://github.com/doncc/worktools/blob/master/chmod_dir)
 
 批量给子目录赋予权限
+
+#### 3. [build_json](https://github.com/doncc/worktools/tree/master/build_json)
+
+构建文件目录的json结构
+
