@@ -22,7 +22,7 @@
 
 重命名并整理pptx
 
-#### 5. [ppt2pdf](https://github.com/doncc/worktools/tree/master/ppt2pdf)
+#### 5. [ppt2pdf](https://github.com/doncc/worktools/blob/master/ppt2pdf.zip)
 
 这是一个macOX的Automator批量流程工具。根据名称就可以知道这是干什么的。
 
