@@ -104,7 +104,7 @@ class Steps:
 
     def __init__(self):
         self.stepName = "【知识点名】"
-        self.stepPage = "【4，5】"
+        self.stepPage = "【页数】"
 
 
 class Errors:

@@ -3,7 +3,7 @@
 
 **工具种类持续缓慢增加**
 
-> 温馨提示：本工具集所有工具，以“够用、可干活”为主，代码并没有写得很极简。极客们请勿瞎喷。
+> 温馨提示：本工具集所有工具，以“够用、可干活”为主，并适用于我自己的工作范围。代码并没有写得很极简。极客们请勿瞎喷。
 
 
 
@@ -17,4 +17,16 @@
 #### 3. [build_json](https://github.com/doncc/worktools/tree/master/build_json)
 
 构建文件目录的json结构
+
+#### 4. [rename_pptx.sh](https://github.com/doncc/worktools/tree/master/rename_pptx.sh)
+
+重命名并整理pptx
+
+#### 5. [ppt2pdf](https://github.com/doncc/worktools/tree/master/ppt2pdf)
+
+这是一个macOX的Automator批量流程工具。根据名称就可以知道这是干什么的。
+
+#### 6. [TranslateVideo](https://github.com/doncc/VideoConversionTool)
+
+基于FFmpeg的视频转换小工具
 
