@@ -3,7 +3,7 @@
 
 **工具种类持续缓慢增加**
 
-> 温馨提示：本工具集所有工具，以“够用、可干活”为主，并适用于我自己的工作范围。代码并没有写得很极简。极客们请勿瞎喷。
+> 温馨提示：本工具集所有工具，以“够用、可干活”为主，并适用于我自己的工作范围。代码并没有写得很极简。极客们勿喷。
 
 
 
@@ -29,4 +29,12 @@
 #### 6. [TranslateVideo](https://github.com/doncc/VideoConversionTool)
 
 基于FFmpeg的视频转换小工具
+
+#### 7.[move_and_rename_PPT_file](https://github.com/doncc/move_and_rename_PPT_file.py)
+
+批量移动ppt文件位置，并重命名文件。
+
+此脚本是[move_ppt.py](https://github.com/doncc/worktools/blob/master/move_ppt.py)和[rename_pptx.sh](https://github.com/doncc/worktools/tree/master/rename_pptx.sh)两个脚本的升级版
+
+
 
