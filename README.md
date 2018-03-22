@@ -30,7 +30,7 @@
 
 基于FFmpeg的视频转换小工具
 
-#### 7.[move_and_rename_PPT_file](https://github.com/doncc/move_and_rename_PPT_file.py)
+#### 7.[move_and_rename_PPT_file](https://github.com/doncc/worktools/blob/master/move_and_rename_PPT_file.py)
 
 批量移动ppt文件位置，并重命名文件。
 
