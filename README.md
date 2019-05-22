@@ -30,11 +30,13 @@
 
 基于FFmpeg的视频转换小工具
 
-#### 7.[move_and_rename_PPT_file](https://github.com/doncc/worktools/blob/master/move_and_rename_PPT_file.py)
+#### 7. [move_and_rename_PPT_file](https://github.com/doncc/worktools/blob/master/move_and_rename_PPT_file.py)
 
 批量移动ppt文件位置，并重命名文件。
 
 此脚本是[move_ppt.py](https://github.com/doncc/worktools/blob/master/move_ppt.py)和[rename_pptx.sh](https://github.com/doncc/worktools/tree/master/rename_pptx.sh)两个脚本的升级版
 
+#### 8. [haier_sign.sh](https://github.com/doncc/worktools/blob/master/haier_sign.sh)
 
+APK签名、上传海尔电视的一键脚本
 
