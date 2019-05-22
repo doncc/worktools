@@ -36,7 +36,7 @@
 
 此脚本是[move_ppt.py](https://github.com/doncc/worktools/blob/master/move_ppt.py)和[rename_pptx.sh](https://github.com/doncc/worktools/tree/master/rename_pptx.sh)两个脚本的升级版
 
-#### 8. [haier_sign.sh](https://github.com/doncc/worktools/blob/master/HaierTools)
+#### 8. [HaierTools](https://github.com/doncc/worktools/blob/master/HaierTools)
 
 APK签名、上传APK至海尔电视、移除已安装APK、移动APK只预载路径的脚本
 
