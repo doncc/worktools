@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+  defaultConfig {
+    applicationId "${PACKAGE_NAME}"
+    manifestPlaceholders = [
+            XG_ACCESS_ID: "${XG_ACCESS_ID}",
+            XG_ACCESS_KEY: "${XG_ACCESS_KEY}",
+            JPUSH_APPKEY: "${JPUSH_APPKEY}",
+            UMENG_APP_KEY: "${UMENG_APP_KEY}",
+            UMENG_PUSH_SECRET: "${UMENG_PUSH_SECRET}",
+            HUAWEI_APP_ID: "${HUAWEI_APP_ID}",
+            XM_APP_ID: "${XM_APP_ID}",
+            XM_APP_KEY: "${XM_APP_KEY}",
+            TT_ACTIVE_ID: ${TT_ACTIVE_ID},
+            TT_ACTIVE_NAME: "${TT_ACTIVE_NAME}",
+            GDT_ACTION_ID: "${GDT_ACTION_ID}",
+            GDT_SECRET_KEY: "${GDT_SECRET_KEY}",
+            BAIDU_APP_ID: "${BAIDU_APP_ID}",
+
+            GETUI_APP_ID: "${GETUI_APP_ID}",
+            GETUI_APP_KEY: "${GETUI_APP_KEY}",
+            GETUI_APP_SECRET: "${GETUI_APP_SECRET}",
+    ]
+  }
+}

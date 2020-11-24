@@ -1,0 +1,98 @@
+{
+  "s_outer_ad_g":"0",
+  "s_inner_ad_g":"0",
+  "s_lock_ad_g":"0",
+  "s_unlock_ad_g":"0",
+  "s_Inter_ad_g":"0",
+  "s_auto_inter_ad_g":"0",
+  "s_auto_feed_ad_g":"0",
+  "s_news_ad_g":"0",
+  "s_ab_ad_guide":"0",
+  "s_po_ad_guide":"0",
+  "s_pn_ad_guide":"0",
+  "s_in_un_ad_guide":"0",
+  "s_result_ad_guide":"0",
+  "s_wifi_ad_guide":"0",
+
+  "a_i_tt": "${TAPPID}",
+  "a_i_ks": "${KAPPID}",
+  "a_i_gdt": "${GAPPID}",
+  "a_i_ms": "${MSAPPID}",
+
+  "ad_p_splash":"${MSPLASH}",
+  "ad_p_splash2":"${GSPLASH}=${KSPLASH}",
+  "ad_p_splash_inner":"${TSPLASH}=${GSPLASH}",
+
+  "ad_p_home":"${THOME}-${THOME}-${MHOME}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_home1":"${MHOME}-${THOME}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_home2":"${THOME}-${MHOME}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_home3":"${MHOME}-${THOME}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_home4":"${THOME}-${MHOME}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_home5":"${MHOME}-${THOME}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_home6":"${THOME}-${MHOME}=${TERROR}-${GERROR}-${KERROR}",
+
+  "ad_p_s_m":"${THOME}-${THOME}-${MHOME}-${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_result":"${TRESULT}-${TRESULT}=${MRESULT}-${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_news":"${TNEWS}-${MNEWS}-${TNEWS}-${MNEWS}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_dialog":"${TDIALOG}-${MDIALOG}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_auto_insert":"${TAI}-${TAI}=${TINSERT}-${GINSERT}",
+  "ad_p_auto_work":"${TAW}-${MAW}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_auto_result":"${TAR}-${MAR}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_feed_insert":"${TFI}-${TFI}=${KFI}-${TINSERT}-${GINSERT}",
+  "ad_p_result_insert":"${TRI}-${TRI}=${KRI}-${TINSERT}-${GINSERT}",
+  "ad_p_done_ad":"${TRI}-${KRI}-${TINSERT}-${GINSERT}",
+  "ad_p_news_insert":"${TINSERT}-${TINSERT}=${GINSERT}",
+
+  "ad_p_i_u":"${TIU}-${TIU}-${MIU}=${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_lock":"${MLOCK}-${MLOCK}-${MLOCK}-${GLOCK}=${GERROR}-${KERROR}",
+  "ad_p_auto_booster":"${TAB}=${GERROR}-${KERROR}",
+  "ad_p_unlock":"${KUNLOCK}-${GUNLOCK}=${TERROR}-${GERROR}-${KERROR}",
+  "un_count": "50",
+  "un_t": "60000",
+
+  "ad_p_phone_over":"${MOUTER}-${KOUTER}-${GERROR}-${KERROR}",
+  "ad_p_wifi_connect":"${MOUTER}-${KOUTER}-${GERROR}-${KERROR}",
+  "ad_p_bu":"${MOUTER}-${KOUTER}-${GERROR}-${KERROR}",
+  "ad_p_power_notify":"${MOUTER}-${KOUTER}-${GERROR}-${KERROR}",
+  "ad_p_exit":"${MHOME}=${GERROR}-${KERROR}",
+  "ad_p_idle":"${TINSERT}-${TINSERT}=${GINSERT}",
+
+  "ad_p_ev":"${TEV}-${TEV}=${TERROR}-${KERROR}",
+  "ad_p_ev_gdt":"${MEV}-${MEV}=${GERROR}-${KERROR}",
+  "ad_p_ev_ks":"${KEV}-${KEV}=${GERROR}-${KERROR}",
+
+  "ad_p_notify_insert":"${GINSERT}",
+
+  "ad_p_app_out":"${TOI}-${TOI}=${KOI2}-${GINSERT}",
+  "a_o_i":"120000",
+  "a_o_c":"15",
+
+  "ad_p_outer_insert":"${TOI}-${TOI}=${KOI2}-${KOI3}-${KOI4}-${GINSERT}",
+  "max_oi_count":"27",
+
+  "ad_p_outer_insert_g":"${KOI1}-${KOI1}=${KOI2}-${KOI3}-${KOI4}-${GINSERT}",
+  "max_oi_g_count":"22",
+
+  "en_ev_oi":"1",
+  "en_ab_oi":"1",
+
+  "ad_p_n_s_1":"${MNS1}",
+  "ad_p_n_s_2":"${MNS2}",
+
+  "ad_draw_video": "${TDV}",
+  "ad_full_video": "${TFI}",
+  "ad_r_video": "${TRV}",
+  "v_flow": "${VIDEOFLOW}",
+
+  "ad_p_splash_insert":"${GSI}-${GSI}-${GSI}-${KSI}=${GSI}",
+  "s_i_count":"15",
+  "s_i_t":"180000",
+  "s_i_e_d_l": "1",
+
+  "tt_ev_count": "30",
+  "ks_ev_count": "20",
+  "gdt_ev_count": "30",
+
+  "fun_auto_enable":"1",
+  "s_ad_dot":"1"
+}

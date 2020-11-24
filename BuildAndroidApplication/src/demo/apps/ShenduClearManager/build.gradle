@@ -1,0 +1,26 @@
+rootProject.ext.uiTemplate = 1
+
+rootProject.ext.qudaos = [
+        ["QX", "WX", "GDT", "2", ""]
+]
+
+apply from: "${rootProject.ext.appGradle}"
+apply from: "appInfo.gradle"
+
+android {
+    defaultConfig {
+        versionCode 1
+
+        manifestPlaceholders += [
+                JPUSH_PKGNAME : "${applicationId}",
+                JPUSH_CHANNEL : "channel", //暂时填写默认值即可.
+        ]
+
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':${UITEMPLATE_GRADLE_CONFIG}')
+}

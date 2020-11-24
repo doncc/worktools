@@ -1,0 +1,36 @@
+rootProject.ext.uiTemplate = ${UITEMPLATE}
+
+rootProject.ext.qudaos = [
+        ${QUDAOS}
+]
+
+apply from: "${rootProject.ext.appGradle}"
+apply from: "appInfo.gradle"
+
+android {
+    defaultConfig {
+        versionCode 1
+
+        manifestPlaceholders += [
+                JPUSH_PKGNAME : "${applicationId}",
+                JPUSH_CHANNEL : "channel", //暂时填写默认值即可.
+        ]
+
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    switch (rootProject.ext.uiTemplate){
+        case 1:
+            implementation project(path: ':baseOrange')
+            break;
+        case 2:
+            implementation project(path: ':baseSecure')
+            break;
+        case 3:
+            implementation project(path: ':baseOrange')
+            break
+    }
+}

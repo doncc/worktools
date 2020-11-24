@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+  defaultConfig {
+    applicationId "com.js.fast.ua.exme"
+    manifestPlaceholders = [
+            XG_ACCESS_ID: "2100352707",
+            XG_ACCESS_KEY: "AP69A1H96CIH",
+            JPUSH_APPKEY: "70f3dc272cd01075823aedf5",
+            UMENG_APP_KEY: "5fa4f00745b2b751a92551c8",
+            UMENG_PUSH_SECRET: "209b9f8fb6cd01ed96becd71acd78fc8",
+            HUAWEI_APP_ID: "103220613",
+            XM_APP_ID: "2882303761518445637",
+            XM_APP_KEY: "5951844578637",
+            TT_ACTIVE_ID: 1,
+            TT_ACTIVE_NAME: "",
+            GDT_ACTION_ID: "1111179472",
+            GDT_SECRET_KEY: "b2ba97c514f292b6ca00ee44dba619ae",
+            BAIDU_APP_ID: "",
+
+            GETUI_APP_ID: "WerUEXHOth7STx9nd4xA05",
+            GETUI_APP_KEY: "amYcSTdaYU6m4sLfV5kti7",
+            GETUI_APP_SECRET: "dKGr95UaLi9krdGcxO8iZ8",
+    ]
+  }
+}
