@@ -33,6 +33,10 @@ class AndroidProjectMaker(object):
             'icon11': '300.png',
             'icon12': 'l_ad.png'
         }
+        self.ad_template = {
+            'msgdtks': 'msgdtks.json',
+            'mstt': 'mstt.json'
+        }
 
     class Builder(object):
 
@@ -122,9 +126,20 @@ class AndroidProjectMaker(object):
 
                 if file.name.endswith('AdConfigureImpl.java'):
                     if key.encode('utf-8') == 'DEFAULTADC':
+                        # 识别不同广告json模版
+                        ad_template_file = self.ad_template['msgdtks']
+                        ad_template_file_name = json.loads(self.excel_json)['AD_TEMPLATE'].encode('utf-8')
+                        # print ad_template_file_name
+                        for i in self.ad_template:
+                            if i == ad_template_file_name:
+                                # print '找到了'+ ad_template_file_name
+                                ad_template_file = self.ad_template[i]
+                                # print ad_template_file
+
+
                         adconfigmstt_file_path = os.path.join(constant.base_path, constant.apps_path,
                                                               constant.project_name,
-                                                              'adtemplate', 'adconfigmstt.json')
+                                                              'adtemplate', ad_template_file)
                         adfile = open(adconfigmstt_file_path)
                         value = json.dumps(adfile.read())
 

@@ -31,7 +31,7 @@
   "ad_p_home5":"${MHOME}-${THOME}=${TERROR}-${GERROR}-${KERROR}",
   "ad_p_home6":"${THOME}-${MHOME}=${TERROR}-${GERROR}-${KERROR}",
 
-  "ad_p_s_m":"${THOME}-${THOME}-${MHOME}-${TERROR}-${GERROR}-${KERROR}",
+  "ad_p_s_m":"${THOME}-${THOME}=${MHOME}-${TERROR}-${GERROR}-${KERROR}",
   "ad_p_result":"${TRESULT}-${TRESULT}=${MRESULT}-${TERROR}-${GERROR}-${KERROR}",
   "ad_p_news":"${TNEWS}-${MNEWS}-${TNEWS}-${MNEWS}=${TERROR}-${GERROR}-${KERROR}",
   "ad_p_dialog":"${TDIALOG}-${MDIALOG}=${TERROR}-${GERROR}-${KERROR}",
