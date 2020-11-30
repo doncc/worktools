@@ -1,0 +1,98 @@
+{
+  "s_outer_ad_g":"0",
+  "s_inner_ad_g":"0",
+  "s_lock_ad_g":"0",
+  "s_unlock_ad_g":"0",
+  "s_Inter_ad_g":"0",
+  "s_auto_inter_ad_g":"0",
+  "s_auto_feed_ad_g":"0",
+  "s_news_ad_g":"0",
+  "s_ab_ad_guide":"0",
+  "s_po_ad_guide":"0",
+  "s_pn_ad_guide":"0",
+  "s_in_un_ad_guide":"0",
+  "s_result_ad_guide":"0",
+  "s_wifi_ad_guide":"0",
+
+  "a_i_tt": "",
+  "a_i_ks": "519700041",
+  "a_i_gdt": "1111242272",
+  "a_i_ms": "102783",
+
+  "ad_p_splash":"s_a_m_i_s:1016351",
+  "ad_p_splash2":"s_a_g_i_s:7071946420750136=s_a_k_i_s:5197001465",
+  "ad_p_splash_inner":"s_a_c_i_s:=s_a_g_i_s:7071946420750136",
+
+  "ad_p_home":"i_s_c_i_t_c:-i_s_c_i_t_c:-n_a_m_f_o:1016354=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_home1":"n_a_m_f_o:1016354-i_s_c_i_t_c:=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_home2":"i_s_c_i_t_c:-n_a_m_f_o:1016354=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_home3":"n_a_m_f_o:1016354-i_s_c_i_t_c:=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_home4":"i_s_c_i_t_c:-n_a_m_f_o:1016354=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_home5":"n_a_m_f_o:1016354-i_s_c_i_t_c:=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_home6":"i_s_c_i_t_c:-n_a_m_f_o:1016354=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+
+  "ad_p_s_m":"i_s_c_i_t_c:-i_s_c_i_t_c:=n_a_m_f_o:1016354-n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_result":"i_s_c_i_t_c:-i_s_c_i_t_c:=n_a_m_f_o:1016355-n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_news":"n_a_c_i_t:-n_a_m_f_o:1016356-n_a_c_i_t:-n_a_m_f_o:1016356=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_dialog":"i_s_c_i_t_c:-n_a_m_f_o:1016357=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_auto_insert":"i_s_c_i_t:-i_s_c_i_t:=i_s_c_i_t:-i_s_g_i_t:1001141490958951",
+  "ad_p_auto_work":"i_s_c_i_t_c:-n_a_m_f_o:1016358=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_auto_result":"i_s_c_i_t_c:-n_a_m_f_o:1016359=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_feed_insert":"i_s_c_i_v:-i_s_c_i_v:=i_s_k_i_v:5197001469-i_s_c_i_t:-i_s_g_i_t:1001141490958951",
+  "ad_p_result_insert":"i_s_c_i_v:-i_s_c_i_v:=i_s_k_i_v:5197001468-i_s_c_i_t:-i_s_g_i_t:1001141490958951",
+  "ad_p_done_ad":"i_s_c_i_v:-i_s_k_i_v:5197001468-i_s_c_i_t:-i_s_g_i_t:1001141490958951",
+  "ad_p_news_insert":"i_s_c_i_t:-i_s_c_i_t:=i_s_g_i_t:1001141490958951",
+
+  "ad_p_i_u":"i_s_c_i_t_c:-i_s_c_i_t_c:-n_a_m_f_o:1016360=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_lock":"n_a_m_f_o:1016361-n_a_m_f_o:1016361-n_a_m_f_o:1016361-n_a_g_n_o:1041941420353984=n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_auto_booster":"i_s_c_i_t_c:=n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_unlock":"i_s_k_i_v:5197001481-i_s_g_i_v:8031744460461187=n_a_c_i_t:-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "un_count": "50",
+  "un_t": "60000",
+
+  "ad_p_phone_over":"n_a_m_f_o:1016362-n_a_k_f_o:5197001477-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_wifi_connect":"n_a_m_f_o:1016362-n_a_k_f_o:5197001477-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_bu":"n_a_m_f_o:1016362-n_a_k_f_o:5197001477-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_power_notify":"n_a_m_f_o:1016362-n_a_k_f_o:5197001477-n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_exit":"n_a_m_f_o:1016354=n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_idle":"i_s_c_i_t:-i_s_c_i_t:=i_s_g_i_t:1001141490958951",
+
+  "ad_p_ev":"i_s_c_i_t_c:-i_s_c_i_t_c:=n_a_c_i_t:-n_a_k_f_o:5197001470",
+  "ad_p_ev_gdt":"n_a_m_f_o:1016363-n_a_m_f_o:1016363=n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+  "ad_p_ev_ks":"n_a_k_f_o:5197001467-n_a_k_f_o:5197001467=n_a_g_n_o:8011045430957942-n_a_k_f_o:5197001470",
+
+  "ad_p_notify_insert":"i_s_g_i_t:1001141490958951",
+
+  "ad_p_app_out":"i_s_c_i_v:-i_s_c_i_v:=i_s_k_i_v:5197001474-i_s_g_i_t:1001141490958951",
+  "a_o_i":"120000",
+  "a_o_c":"15",
+
+  "ad_p_outer_insert":"i_s_c_i_v:-i_s_c_i_v:=i_s_k_i_v:5197001474-i_s_k_i_v:5197001475-i_s_k_i_v:5197001476-i_s_g_i_t:1001141490958951",
+  "max_oi_count":"27",
+
+  "ad_p_outer_insert_g":"i_s_k_i_v:5197001473-i_s_k_i_v:5197001473=i_s_k_i_v:5197001474-i_s_k_i_v:5197001475-i_s_k_i_v:5197001476-i_s_g_i_t:1001141490958951",
+  "max_oi_g_count":"22",
+
+  "en_ev_oi":"1",
+  "en_ab_oi":"1",
+
+  "ad_p_n_s_1":"n_a_m_f_o:1016352",
+  "ad_p_n_s_2":"n_a_m_f_o:1016353",
+
+  "ad_draw_video": "",
+  "ad_full_video": "i_s_c_i_v:",
+  "ad_r_video": "",
+  "v_flow": "https://cpu.baidu.com/1085/d08603ee?scid=43408",
+
+  "ad_p_splash_insert":"s_a_g_i_s:5051842430355977-s_a_g_i_s:5051842430355977-s_a_g_i_s:5051842430355977-s_a_k_i_s:5197001478=s_a_g_i_s:5051842430355977",
+  "s_i_count":"15",
+  "s_i_t":"180000",
+  "s_i_e_d_l": "1",
+
+  "tt_ev_count": "30",
+  "ks_ev_count": "20",
+  "gdt_ev_count": "30",
+
+  "fun_auto_enable":"1",
+  "s_ad_dot":"1"
+}
