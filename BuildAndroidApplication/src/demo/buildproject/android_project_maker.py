@@ -1,12 +1,13 @@
 # coding=UTF-8
-import shutil
-import collections
-import os
-from pathlib2 import Path
-import constant
 import json
-import copy_file as cf
+import os
+import shutil
+
 from PIL import Image
+from pathlib2 import Path
+
+import constant
+import copy_file as cf
 
 
 class AndroidProjectMaker(object):
@@ -45,8 +46,8 @@ class AndroidProjectMaker(object):
             self.path = None
             self.excel_json = None
 
-        def build(self):
-            return AndroidProjectMaker(self).build()
+        def build(self, IS_DEBUG_MODE):
+            return AndroidProjectMaker(self).build(IS_DEBUG_MODE)
 
         def set_base_path(self, path):
             self.path = path
@@ -59,7 +60,7 @@ class AndroidProjectMaker(object):
         def get_base_path(self):
             return self.excel_json
 
-    def build(self):
+    def build(self, IS_DEBUG_MODE):
 
         excel_json_str = self.excel_json
 
@@ -68,7 +69,9 @@ class AndroidProjectMaker(object):
             dir = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name)
             self.itertor_dir(dir, json.loads(excel_json_str))
             self.replace_icon(json.loads(excel_json_str))
-            os.system('cd configure && ./build.sh ../apps/' + self.get_application_name() + ' ' + self.get_application_name())
+            if IS_DEBUG_MODE == 'false':
+                os.system(
+                    'cd configure && ./build.sh ../apps/' + self.get_application_name() + ' ' + self.get_application_name())
 
         except Exception, e:
             print e
@@ -162,7 +165,6 @@ class AndroidProjectMaker(object):
                                 ad_template_file = self.ad_template[i]
                                 # print ad_template_file
 
-
                         adconfigmstt_file_path = os.path.join(constant.get_base_path(), constant.apps_path,
                                                               constant.project_name,
                                                               'adtemplate', ad_template_file)
@@ -206,11 +208,14 @@ class AndroidProjectMaker(object):
                 print 'ic_path'
                 print ic_path
 
-                mipmap_path = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name, 'src', 'main',
+                mipmap_path = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name, 'src',
+                                           'main',
                                            'res', 'mipmap-xxxhdpi', 'ic_launcher.png')
-                mipmap_round_path = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name, 'src',
+                mipmap_round_path = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name,
+                                                 'src',
                                                  'main', 'res', 'mipmap-xxxhdpi', 'ic_launcher_round.png')
-                drawable_xxhdpi = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name, 'src',
+                drawable_xxhdpi = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name,
+                                               'src',
                                                'main', 'res', 'drawable-xxhdpi', 'splash_icon.png')
 
                 cf.copy_file(os.path.join(ic_path, name), mipmap_path)
