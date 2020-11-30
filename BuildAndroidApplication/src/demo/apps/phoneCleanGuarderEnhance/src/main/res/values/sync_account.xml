@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="sync_account_type">com.pcg.uarder.enhan.type</string>
-    <string name="sync_content_auth">com.pcg.uarder.enhan.provider</string>
-</resources>

@@ -1,8 +1,6 @@
 rootProject.ext.uiTemplate = ${UITEMPLATE}
 
-rootProject.ext.qudaos = [
-        ${QUDAOS}
-]
+${QUDAOS}
 
 apply from: "${rootProject.ext.appGradle}"
 apply from: "appInfo.gradle"

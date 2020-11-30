@@ -28,7 +28,7 @@ def read_excel(file):
 
 def temp_write_out_file(res_json):
     # 临时写入
-    tempJsonFile = open('%s/appTempFile/excel.json' % (constant.base_path), 'w')
+    tempJsonFile = open('%s/appTempFile/excel.json' % (constant.get_base_path()), 'w')
     tempJsonFile.writelines(res_json)
     tempJsonFile.close()
     # 临时写入-end

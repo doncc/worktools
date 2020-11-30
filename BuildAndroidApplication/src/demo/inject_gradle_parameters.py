@@ -9,7 +9,7 @@ JENKINS_PLATFORM1 = None
 JENKINS_PLATFORM2 = None
 JENKINS_COUNT = None
 JENKINS_SPECIFY_PACKAGE = None
-GRADLE_PATH = None
+JENKINS_GRADLE_FILE = None
 
 if len(sys.argv) > 1:
     print'yes'
@@ -18,25 +18,27 @@ if len(sys.argv) > 1:
     JENKINS_PLATFORM2 = sys.argv[3]
     JENKINS_COUNT = sys.argv[4]
     JENKINS_SPECIFY_PACKAGE = sys.argv[5]
-    GRADLE_PATH = sys.argv[6]
+    JENKINS_GRADLE_FILE = sys.argv[6]
 else:
     print 'no'
-    GRADLE_PATH = './gradle.properties'
+    JENKINS_GRADLE_FILE = './gradle.properties'
 
 print JENKINS_AGENT
 print JENKINS_PLATFORM1
 print JENKINS_PLATFORM2
 print JENKINS_COUNT
 print JENKINS_SPECIFY_PACKAGE
+print JENKINS_GRADLE_FILE
 
 agent = r'${JENKINS_AGENT}'
 platform1 = r'${JENKINS_PLATFORM1}'
 platform2 = r'${JENKINS_PLATFORM2}'
 count = r'${JENKINS_COUNT}'
 specify_package = r'${JENKINS_SPECIFY_PACKAGE}'
+gradle_file = r'${JENKINS_GRADLE_FILE}'
 
-f1 = open(GRADLE_PATH, 'r+')
-f2 = open(GRADLE_PATH + '_temp', 'w+')
+f1 = open(JENKINS_GRADLE_FILE, 'r+')
+f2 = open(JENKINS_GRADLE_FILE + '_temp', 'w+')
 
 
 def replace(oldStr, newStr, ss):
@@ -66,6 +68,10 @@ def open():
             continue
         elif specify_package in ss:
             a = replace(specify_package, JENKINS_SPECIFY_PACKAGE, ss)
+            f2.write(a)
+            continue
+        elif gradle_file in ss:
+            a = replace(specify_package, JENKINS_GRADLE_FILE, ss)
             f2.write(a)
             continue
         else:

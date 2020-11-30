@@ -1,4 +1,5 @@
 # coding=UTF-8
+import shutil
 import collections
 import os
 from pathlib2 import Path
@@ -30,8 +31,8 @@ class AndroidProjectMaker(object):
             'icon8': 'icon8.png',
             'icon9': 'icon9.png',
             'icon10': 'icon10.png',
-            'icon11': '300.png',
-            'icon12': 'l_ad.png'
+            'icon11': 'icon11.png',
+            'icon12': 'icon12.png'
         }
         self.ad_template = {
             'msgdtks': 'msgdtks.json',
@@ -64,22 +65,35 @@ class AndroidProjectMaker(object):
 
         try:
             self.rename_project_dir(excel_json_str)
-            dir = os.path.join(constant.base_path, constant.apps_path, constant.project_name)
+            dir = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name)
             self.itertor_dir(dir, json.loads(excel_json_str))
             self.replace_icon(json.loads(excel_json_str))
+            os.system('cd configure && ./build.sh ../apps/' + self.get_application_name() + ' ' + self.get_application_name())
 
         except Exception, e:
             print e
-        pass
+        return self
+
+    def get_application_name(self):
+        return json.loads(self.excel_json)['APPLICATION_NAME'].encode('utf-8')
+
+    def get_qudaos(self):
+        return json.loads(self.excel_json)['QUDAOS'].encode('utf-8')
 
     def rename_project_dir(self, excel_json_dict):
         file = self.base_dir + "/" + constant.temp_application_name
         # print file
         if Path(file).exists():
-            print '存在，重命名'
+            print '存在，重命名==='
             try:
                 application_name = json.loads(excel_json_dict)['APPLICATION_NAME'].encode('utf-8')
-                os.rename(file, os.path.join(constant.base_path, constant.apps_path, application_name))
+                appAbsName = os.path.join(constant.get_base_path(), constant.apps_path, application_name)
+                print "appAbsName"
+                print appAbsName
+                if os.path.exists(appAbsName):
+                    print 'delete old folder'
+                    shutil.rmtree(appAbsName)
+                os.rename(file, appAbsName)
                 constant.project_name = application_name
                 print constant.project_name
             except Exception, e:
@@ -90,13 +104,17 @@ class AndroidProjectMaker(object):
             # print dir_path
             for files in os.listdir(dir_path):
                 name = os.path.join(dir_path, files)
+                print 'start name='
+                print name
                 if os.path.isfile(name):
                     # print name
                     # 找到每个文件名字了
+                    print 'start replace'
                     self.replace(name, excel_json_dict)
 
                 else:
                     self.itertor_dir(name, excel_json_dict)
+                print 'end'
         except Exception, e:
             raise e
 
@@ -118,6 +136,14 @@ class AndroidProjectMaker(object):
                 if file.name.endswith('.DS_Store'):
                     continue
 
+                if file.name.endswith('build.gradle'):
+                    if key.encode('utf-8') == 'QUDAOS':
+                        qudaos = json.loads(self.excel_json)['QUDAOS'].encode('utf-8')
+                        if qudaos == '':
+                            value = qudaos
+                        else:
+                            value = '''rootProject.ext.qudaos = [\n\t%s\n]''' % (qudaos)
+
                 if file.name.endswith('ActivityImpl.java'):
                     # 处理ActivityImpl.java整个类代码
                     if key.encode('utf-8') == 'UITEMPLATE_STR':
@@ -137,7 +163,7 @@ class AndroidProjectMaker(object):
                                 # print ad_template_file
 
 
-                        adconfigmstt_file_path = os.path.join(constant.base_path, constant.apps_path,
+                        adconfigmstt_file_path = os.path.join(constant.get_base_path(), constant.apps_path,
                                                               constant.project_name,
                                                               'adtemplate', ad_template_file)
                         adfile = open(adconfigmstt_file_path)
@@ -166,18 +192,25 @@ class AndroidProjectMaker(object):
 
         name = excel_json_dict['APP_ICON'].encode('utf-8')
 
+        print 'name'
+        print name
+        print self.icon
+
         for i in self.icon:
             if self.icon.get(i) == name:
-                print name
+                # print name
 
-                ic_path = os.path.join(constant.base_path, constant.apps_path, constant.project_name, 'icons')
+                ic_path = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name, 'icons')
+                # print ic_path
+
+                print 'ic_path'
                 print ic_path
 
-                mipmap_path = os.path.join(constant.base_path, constant.apps_path, constant.project_name, 'src', 'main',
+                mipmap_path = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name, 'src', 'main',
                                            'res', 'mipmap-xxxhdpi', 'ic_launcher.png')
-                mipmap_round_path = os.path.join(constant.base_path, constant.apps_path, constant.project_name, 'src',
+                mipmap_round_path = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name, 'src',
                                                  'main', 'res', 'mipmap-xxxhdpi', 'ic_launcher_round.png')
-                drawable_xxhdpi = os.path.join(constant.base_path, constant.apps_path, constant.project_name, 'src',
+                drawable_xxhdpi = os.path.join(constant.get_base_path(), constant.apps_path, constant.project_name, 'src',
                                                'main', 'res', 'drawable-xxhdpi', 'splash_icon.png')
 
                 cf.copy_file(os.path.join(ic_path, name), mipmap_path)
