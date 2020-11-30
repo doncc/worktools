@@ -10,8 +10,8 @@ class inject(object):
     JENKINS_PLATFORM2 = None
     JENKINS_COUNT = None
     JENKINS_SPECIFY_PACKAGE = None
-    JENKINS_GRADLE_FILE = '../gradle.properties'
-    JENKINS_GRADLE_FILE_TEMP = '../gradle.properties_temp'
+    JENKINS_GRADLE_FILE = './gradle.properties'
+    JENKINS_GRADLE_FILE_TEMP = './gradle.properties_temp'
 
     agent = r'${JENKINS_AGENT}'
     platform1 = r'${JENKINS_PLATFORM1}'
@@ -37,9 +37,6 @@ class inject(object):
     def open(self):
         for ss in self.f1.readlines():
             if inject.agent in ss:
-                print '替换'
-                print inject.agent
-                print inject.JENKINS_AGENT
                 a = self.replace(inject.agent, inject.JENKINS_AGENT, ss)
                 self.f2.write(a)
                 continue
@@ -98,6 +95,7 @@ class inject(object):
             return
 
         list = _qudaos.split(';')
+
         for qudao in list:
             self._agent_list += qudao[1:-1].split(',')[0] + ','
             self._platform1_list += qudao[1:-1].split(',')[1] + ','
