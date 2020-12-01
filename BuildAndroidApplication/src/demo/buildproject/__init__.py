@@ -5,7 +5,6 @@ import sys
 import android_project_maker as am
 import constant
 import copy_file
-import inject_gradle_parameters as init
 import read_excel as re
 
 file_name = sys.argv[1] #excel文件全名
@@ -18,7 +17,6 @@ if __name__ == "__main__":
         constant.base_path = os.path.abspath('')
     constant.set()
 
-    init.inject().inject_params(JENKINS_QUDAOS)
     # 开始清理apps下所有生成过的工程
 
     appAbsPath = os.path.join(constant.get_base_path(), constant.apps_path)
@@ -33,4 +31,5 @@ if __name__ == "__main__":
     re.temp_write_out_file(excel_json)
     copy_file.cpDirs(constant.old_path, constant.new_path)
     builder = am.AndroidProjectMaker.Builder().set_excel_json(excel_json).set_base_path(
-        '%s/%s' % (constant.get_base_path(), constant.apps_path)).build(IS_DEBUG_MODE.lower())
+        '%s/%s' % (constant.get_base_path(), constant.apps_path)).set_qudaos(JENKINS_QUDAOS).build(IS_DEBUG_MODE)
+

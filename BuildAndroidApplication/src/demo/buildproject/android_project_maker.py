@@ -15,6 +15,7 @@ class AndroidProjectMaker(object):
     def __init__(self, m_builder):
         self.base_dir = m_builder.path
         self.excel_json = m_builder.excel_json
+        self.m_builder = m_builder
         self.activity_return_pkg_name = {
             '1': 'com.orange.fm.MainActivity',
             '2': 'com.orange.fm.SimpleMainActivity',
@@ -45,6 +46,11 @@ class AndroidProjectMaker(object):
         def __init__(self):
             self.path = None
             self.excel_json = None
+            self.agent = None
+            self.platform1 = None
+            self.platform2 = None
+            self.count = None
+            self.specify_package = None
 
         def build(self, IS_DEBUG_MODE):
             return AndroidProjectMaker(self).build(IS_DEBUG_MODE)
@@ -55,6 +61,46 @@ class AndroidProjectMaker(object):
 
         def set_excel_json(self, excel_json):
             self.excel_json = excel_json
+            return self
+
+        def set_qudaos(self, _qudaos = None):
+            if _qudaos == '':
+                self.agent = ''
+                self.platform1 = ''
+                self.platform2 = ''
+                self.count = ''
+                self.specify_package = ''
+                return self
+
+            list = _qudaos.split(';')
+
+            _agent_list = ''
+            _platform1_list = ''
+            _platform2_list = ''
+            _count_list = ''
+            _specify_package_list = ''
+
+            for qudao in list:
+                _agent_list += qudao[1:-1].split(',')[0] + ','
+                _platform1_list += qudao[1:-1].split(',')[1] + ','
+                _platform2_list += qudao[1:-1].split(',')[2] + ','
+                _count_list += qudao[1:-1].split(',')[3] + ','
+                _specify_package_list += qudao[1:-1].split(',')[4] + ','
+
+                # print qudao_list
+            print '取到参数'
+            print _agent_list[:-1]
+            print _platform1_list[:-1]
+            print _platform2_list[:-1]
+            print _count_list[:-1]
+            print _specify_package_list[:-1]
+
+            self.agent = _agent_list[:-1]
+            self.platform1 = _platform1_list[:-1]
+            self.platform2 = _platform2_list[:-1]
+            self.count = _count_list[:-1]
+            self.specify_package = _specify_package_list[:-1]
+
             return self
 
         def get_base_path(self):
@@ -71,7 +117,7 @@ class AndroidProjectMaker(object):
             self.replace_icon(json.loads(excel_json_str))
             if IS_DEBUG_MODE == 'false':
                 os.system(
-                    'cd configure && ./build.sh ../apps/' + self.get_application_name() + ' ' + self.get_application_name())
+                    'cd configure && ./build.sh ../apps/' + self.get_application_name() + ' ' + self.get_application_name() + ' ' + self.m_builder.agent + ' ' + self.m_builder.platform1 + ' ' + self.m_builder.platform2 + ' ' + self.m_builder.count + ' ' + self.m_builder.specify_package)
 
         except Exception, e:
             print e
@@ -107,17 +153,13 @@ class AndroidProjectMaker(object):
             # print dir_path
             for files in os.listdir(dir_path):
                 name = os.path.join(dir_path, files)
-                print 'start name='
-                print name
                 if os.path.isfile(name):
                     # print name
                     # 找到每个文件名字了
-                    print 'start replace'
                     self.replace(name, excel_json_dict)
 
                 else:
                     self.itertor_dir(name, excel_json_dict)
-                print 'end'
         except Exception, e:
             raise e
 
